@@ -18,3 +18,13 @@ I currently only have access to Black Ops II, III and IIII for PC so if someone 
  * The boolean value for Radial Gradient Mode takes up 4 entire bytes for some reason
  * Every layer ends with FF00
  * There can be 64 layers. One layer has 96 bytes and an entire emblem has 6144 bytes.
+ 
+ # How To Use
+ For the most part you will need to find the offsets and addresses for your own specific use cases
+  ## Black Ops II PC
+  The most recently loaded emblems will always be at 0x02947A68, 0x02947FF8, 0x02948588, 0x02948B18, 0x029490A8, 0x02949638, 0x02949BC8, 0x0294A158, 0x0294A6E8, 0x0294AC78. This is the entire page of emblems if you were to look in baracks or on CODTV etc.
+  In order to apply a custom emblem you can write it to the address 0x0294B7A0 **while you are in the emblem editor currently editing an emblem**. That is the address for the emblem in the editor so if you write to that you can just save it as a new emblem or you can see modifications to the emblem on the fly if you just continuosly write to it.
+  ## Black Ops III PC
+  I'm still having trouble finding emblems, but it seems a few are loaded between 0x7FF7DD415D9C and 0x7FF7DD424FA3. Similar to BO2, you can use the address for the emblem in the editor, which is 0x7FF7DD4207BC, in order to apply custom emblems.
+  ## Risks / Banning
+  So far I haven't been banned on either game for tampering with emblems. BO2 will just let you run Wire Shark, Cheat Engine and inject stuff into the memory where emblems are no problem. BO3 will automatically crash as an Anti-Debug defence if you launch anything too sus so make sure you use Windows Resource Monitor to suspend the BO3 process before you launch your memory inspector of choice. If you write your own program to read / edit the addresses, once you know what they are, then BO3 will barely ever crash on you.
