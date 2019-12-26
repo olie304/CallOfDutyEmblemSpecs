@@ -17,6 +17,7 @@ I currently only have access to Black Ops II, III and IIII for PC so if someone 
  * There are two colors in BO3 so that you can do gradients. Having 2 different colors automatically enables the gradient mode
  * The boolean value for Radial Gradient Mode takes up 4 entire bytes for some reason
  * Every layer ends with FF00
+ * If a layer is using a color instead of a material the material ID should be FFFF
  * There can be 64 layers. One layer has 96 bytes and an entire emblem has 6144 bytes.
  
  # How To Use
