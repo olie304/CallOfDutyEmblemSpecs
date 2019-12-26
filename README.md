@@ -7,7 +7,7 @@ I currently only have access to Black Ops II, III and IIII for PC so if someone 
 **EmblemID**(UInt16), **Red**(float32), **Green**(float32), **Blue**(float32), **Alpha**(float32), **PosX**(float32), **PosY**(float32), **ScaleX**(float32), **ScaleY**(float32), **Rotation**(float32)[Degrees], **Outlined**(byte)[Bool], **Flipped**(byte)[Bool], **Padding**(2 Bytes)
 * True Scale is equal to 2^ScaleVal and to convert back (e.g. you have the value 50% or 0.5) use log2(S)
 * Position is equal to the % of the screen away from the center 
-  - e.g. if the center of the emblem was placed on the right edge of the viewing window PosX is 1.0 and on the left edge -1.0
+  - e.g. if the center of the emblem was placed on the right edge of the viewing window PosX is 1.0 and on the left edge -1.0 because it is 100% of the distance from the center (Actually it might be 0.5 and 50%, can't remember rn)
   - Values can be more than +-100%
 * There can be 32 layers. One layer has 44 bytes and an entire emblem has 1408 bytes.
   
